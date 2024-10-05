@@ -1,23 +1,26 @@
 import { Main } from './Main'
 import { Headers } from './Header'
-import { ContainerCards } from './ContainerCards'
+
 import { helpHttp } from '../helpers/helphttp'
 import Api from '../helpers/api_routes'
 import { useEffect, useState } from 'react'
 
 
 export function ApiBanderas() {
-
+    const [url, setUrl] = useState("")
     const [banderas, setBanderas] = useState([]);
     const [error, setError] = useState(null);
     // const [loading, setLoading] = useState(true)
-
+    
+    if(url === "" || url === null){
+        setUrl(Api.GETALL)
+    }
+    
    
     useEffect(() => {
             let dataBanderas = helpHttp();
-            let getAllUrl =  Api.GETALL;
 
-            dataBanderas.get(getAllUrl).then((res)=>{
+            dataBanderas.get(url).then((res)=>{
                 if(!res.err){
                     // console.log(res)
                     setBanderas(res);
@@ -28,26 +31,17 @@ export function ApiBanderas() {
                 }
             })
             
-    }, [])
+    }, [url])
     
-
-
+ 
+        
 
     return (
       <>
        <Headers /> 
   
-       <Main/>
+       <Main setUrl={setUrl} banderas={banderas} error={error}/>
 
-        
-            {banderas && <ContainerCards banderas={banderas} />}
-
-            {error && <h1>Hubo un error en la api </h1>}
-        
-
-       
-  
-    
       </>
     )
   }

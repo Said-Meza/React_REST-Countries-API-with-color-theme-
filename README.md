@@ -1,3 +1,14 @@
+#first version 
+    -- no working dark mode
+    -- no working infiniti scroll
+    -- no working more about country
+    -- no working form
+
+#second version
+    -- no working dark mode
+    -- no working infiniti scroll
+    -- no working more about country
+ 
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
