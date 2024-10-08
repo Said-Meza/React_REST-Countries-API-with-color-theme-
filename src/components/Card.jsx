@@ -3,7 +3,7 @@ export const Card = ({ el }) => {
     // console.log(el)
     return <article className="card">
 
-        <a className="card__link" href={`#/query=${el.name.common}`}>
+        <a className="card__link" href={`detalles/${el.name.common}`}>
 
 
             <figure className="card__figure">

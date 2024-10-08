@@ -1,7 +1,7 @@
 import { Form } from './Form'
 import { ContainerCards } from './ContainerCards'
 
-export function Main({banderas, error, handleurl,setUrl }) {
+export function Main({banderas, error, setUrl }) {
 
     return (
       <>
