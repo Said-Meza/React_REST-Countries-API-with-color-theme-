@@ -1,23 +1,22 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { useEffect } from "react";
-import {ContainerDetalles} from "./ContainerDetalles";
-import { Btnregresar } from "./Btnregresar";
+import { useApiCountries } from "../hooks/useApiCountries";
+
 import Api from "../helpers/api_routes";
 
-export function MainDetalles({banderas, error, setUrl }) {
+import { Btnregresar } from "./Btnregresar";
+import {ContainerDetalles} from "./ContainerDetalles";
+import { Error404 } from "./Error404";
 
+export function MainDetalles() {
+    const [url, setUrl] = useState("")
     const {text} =useParams();
-    let detalles = banderas[0];
 
-    // console.log(text)
-    let apiurl = `${Api.SEARCH}${text}`;
-    // console.log(apiurl) 
-    
     useEffect(() => {
-        setUrl(apiurl); 
-      }, [text, setUrl, apiurl]);
-
-     
+      setUrl(`${Api.SEARCH}${text}`);
+    }, [text])
+    
+    const {data, err, loading} = useApiCountries(url);
 
     return (
       <>
@@ -25,9 +24,9 @@ export function MainDetalles({banderas, error, setUrl }) {
 
         <main className='main' id='main'>
                 
-              {banderas && <ContainerDetalles detalles={detalles}  />}
+              {data && <ContainerDetalles detalles={data[0]}  />}
                 
-              {error && <h1>Hubo un error en la api </h1>}
+              {err && <Error404 />}
 
         </main>
       </>

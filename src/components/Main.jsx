@@ -1,16 +1,18 @@
 import { Form } from './Form'
 import { ContainerCards } from './ContainerCards'
+import { Error404 } from './Error404';
 
-export function Main({banderas, error, setUrl }) {
+export function Main({data, err, setUrl }) {
 
     return (
       <>
         <main className='main' id='main'>
             <Form  setUrl={setUrl} />
 
-              {banderas && <ContainerCards banderas={banderas}  />}
+              {data && <ContainerCards data={data}  />}
 
-              {error && <h1>Hubo un error en la api </h1>}
+              {err && <Error404 />}
+           
 
         </main>
       </>

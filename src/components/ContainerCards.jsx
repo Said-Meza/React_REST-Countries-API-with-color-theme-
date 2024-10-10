@@ -1,16 +1,16 @@
 import { Card } from './Card'
 
-export const ContainerCards = ({ banderas }) => {
+export const ContainerCards = ({ data }) => {
 
     return (
         <section className='cards container'>
 
-            {banderas.length > 0 ? (
-                banderas.map ( (el, index) => (
+            {data.length > 0 ? (
+                data.map ( (el, index) => (
                                                 <Card key={index} el={el} />
                                               )
                              )
-                ) : (<h2><b>no hay datos de banderas</b> </h2>)
+                ) : (<h2><b>No hay datos de banderas</b> </h2>)
             }
 
         </section>
