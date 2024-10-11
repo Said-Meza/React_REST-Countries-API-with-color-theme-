@@ -14,10 +14,8 @@ import Api from '../helpers/api_routes'
 export function ApiBanderas() {
     const [url, setUrl] = useState("")
     
-    if (url === "" || url === null) {
-        setUrl(Api.GETALL)
-
-    }
+    if (url === "" || url === null) {setUrl(Api.GETALL)}
+        
     const {data, err, loading} = useApiCountries(url)
     
     return (

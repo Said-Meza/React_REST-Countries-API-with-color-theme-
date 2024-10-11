@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import modedark from "../helpers/dark";
-const c = console.log;
 
 export function Btn_darkmode() {
 
@@ -11,8 +10,6 @@ export function Btn_darkmode() {
                 return localdb === "true";
         })
 
-
-
         useEffect(() => {
 
                 if (dark) {
@@ -22,17 +19,13 @@ export function Btn_darkmode() {
                 else {
                         modedark.light()
                         localStorage.setItem("dark", "false")
-
                 }
-
         }, [dark])
 
 
         const handledarkmode = (e) => {
-
                 e.preventDefault();
                 setdark(!dark)
-
         }
 
         return <a onClick={handledarkmode} href="#" className="nav__darkmode">

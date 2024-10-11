@@ -25,7 +25,9 @@
 # five version 
     -- no working dark mode
     -- no working infiniti scroll
-    
+
+# six version 
+    -- no working infiniti scroll
 
 # React + Vite
 
