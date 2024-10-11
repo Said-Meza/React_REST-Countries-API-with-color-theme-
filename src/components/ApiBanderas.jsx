@@ -8,8 +8,6 @@ import { Main } from './Main'
 import { MainDetalles } from './MainDetalles'
 import { Error404 } from './Error404'
 
-
-
 import Api from '../helpers/api_routes'
 
 
@@ -20,9 +18,8 @@ export function ApiBanderas() {
         setUrl(Api.GETALL)
 
     }
-    
     const {data, err, loading} = useApiCountries(url)
-
+    
     return (
         <>
             <Headers />
