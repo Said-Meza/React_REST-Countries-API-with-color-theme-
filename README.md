@@ -15,8 +15,17 @@
     -- no working dark mode
     -- no working infiniti scroll
     -- no working loading
- 
 
+# four version 
+    note: add one custom hooks to request api, change the props some components
+    -- no working dark mode
+    -- no working infiniti scroll
+    -- no working loading
+
+# five version 
+    -- no working dark mode
+    -- no working infiniti scroll
+    
 
 # React + Vite
 

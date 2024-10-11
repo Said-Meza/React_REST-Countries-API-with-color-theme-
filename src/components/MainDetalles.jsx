@@ -7,6 +7,8 @@ import Api from "../helpers/api_routes";
 import { Btnregresar } from "./Btnregresar";
 import {ContainerDetalles} from "./ContainerDetalles";
 import { Error404 } from "./Error404";
+import { Loader } from "./Loader";
+
 
 export function MainDetalles() {
     const [url, setUrl] = useState("")
@@ -23,6 +25,8 @@ export function MainDetalles() {
         <Btnregresar />
 
         <main className='main' id='main'>
+            
+              {loading && <Loader/>}
                 
               {data && <ContainerDetalles detalles={data[0]}  />}
                 

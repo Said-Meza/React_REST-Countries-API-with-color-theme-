@@ -1,13 +1,16 @@
-import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { useApiCountries } from '../hooks/useApiCountries'
-import { Main } from './Main'
-import { Headers } from './Header'
-import { MainDetalles } from './MainDetalles'
+import { useState } from 'react'
 
-// import { helpHttp } from '../helpers/helphttp'
-import Api from '../helpers/api_routes'
+import { useApiCountries } from '../hooks/useApiCountries'
+
+import { Headers } from './Header'
+import { Main } from './Main'
+import { MainDetalles } from './MainDetalles'
 import { Error404 } from './Error404'
+
+
+
+import Api from '../helpers/api_routes'
 
 
 export function ApiBanderas() {
@@ -25,7 +28,7 @@ export function ApiBanderas() {
             <Headers />
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Main data={data} err={err} setUrl={setUrl} />} />
+                    <Route path="/" element={<Main data={data} err={err} setUrl={setUrl} loading={loading} />} />
                     <Route path="/detalles/:text" element={<MainDetalles  />} />
                     <Route path="*" element={<Error404 />} />
                 </Routes>
