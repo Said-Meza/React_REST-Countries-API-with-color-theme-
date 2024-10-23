@@ -1,33 +1,34 @@
-# first version 
-    -- no working form
-    -- no working dark mode
-    -- no working infiniti scroll
-    -- no working more about country
-    -- no working loading
+# First Version
+- No working form
+- No working dark mode
+- No working infinite scroll
+- No working "more about country"
+- No working loading
 
-# second version
-    -- no working dark mode
-    -- no working infiniti scroll
-    -- no working more about country
-    -- no working loading
+# Second Version
+- No working dark mode
+- No working infinite scroll
+- No working "more about country"
+- No working loading
 
-# third version
-    -- no working dark mode
-    -- no working infiniti scroll
-    -- no working loading
+# Third Version
+- No working dark mode
+- No working infinite scroll
+- No working loading
 
-# four version 
-    note: add one custom hooks to request api, change the props some components
-    -- no working dark mode
-    -- no working infiniti scroll
-    -- no working loading
+# Fourth Version
+**Note**: Added a custom hook to request API and changed the props of some components.
+- No working dark mode
+- No working infinite scroll
+- No working loading
 
-# five version 
-    -- no working dark mode
-    -- no working infiniti scroll
+# Fifth Version
+- No working dark mode
+- No working infinite scroll
 
-# six version 
-    -- no working infiniti scroll
+# Sixth Version
+- No working infinite scroll
+
 
 # React + Vite
 

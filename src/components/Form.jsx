@@ -22,13 +22,12 @@ export function Form({ setUrl }) {
 
     }
 
-
     const Handleclick = () => {
         setForm(initialForm)
     }
 
     function actualizarlink(param, param2) {
-        
+
         if (param2 === "search__selected") {
             let url__region = `${Api.REGION}${param}`
             setUrl(url__region)
@@ -60,7 +59,6 @@ export function Form({ setUrl }) {
 
         <select
             className="select input"
-
             onChange={handleChange}
             id="search__selected" value={form.search__selected}
             name="search__selected"
