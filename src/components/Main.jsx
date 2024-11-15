@@ -11,9 +11,9 @@ import { Loader } from './Loader'
 
 export function Main() {
 
-  const [url, setUrl] = useState("")
+  const [url, setUrl] = useState(Api.GETALL)
 
-  url ? url : setUrl(Api.GETALL)
+  
 
   const { data, err, loading } = useApiCountries(url);
 

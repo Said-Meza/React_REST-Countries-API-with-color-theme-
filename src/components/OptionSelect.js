@@ -1,5 +1,5 @@
 export const OptionsData = [
-    { value: '', label: 'Filter by Region', selected:"selected"},
+    { value: 'getall', label: 'Filter by Region', selected:"selected"},
     { value: 'Africa', label: 'Africa' },
     { value: 'america', label: 'America' },
     { value: 'asia', label: 'Asia' },

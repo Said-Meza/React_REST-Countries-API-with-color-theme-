@@ -28,7 +28,9 @@
 
 # Sixth Version
 - No working infinite scroll
-
+# 6.1.0 Version
+- No working infinite scroll
+- refactorize code and changed text modedark
 
 # React + Vite
 

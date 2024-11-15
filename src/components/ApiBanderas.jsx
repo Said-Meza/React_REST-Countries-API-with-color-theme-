@@ -5,7 +5,6 @@ import { Main } from './Main'
 import { MainDetalles } from './MainDetalles'
 import { Error404 } from './Error404'
 
-//data={data} err={err} setUrl={setUrl} loading={loading}
 
 export function ApiBanderas() {
 
